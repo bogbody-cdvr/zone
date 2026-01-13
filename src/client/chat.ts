@@ -2,8 +2,9 @@ import { createContext2D, decodeFont, fonts, makeVector2, imageToContext } from 
 import { Page, scriptToPages, getPageHeight, PageRenderer } from './text';
 import { hex2rgb, rgb2num, hslToRgb } from './utility';
 import { randomInt } from '../common/utility';
+import bogFont from './bog-font';
 
-const font = decodeFont(fonts['ascii-small']);
+const font = decodeFont(bogFont); // decodeFont(fonts['ascii-small']);
 const layout = { font, lineWidth: 240, lineCount: 9999 };
 
 export function filterDrawable(text: string) {
