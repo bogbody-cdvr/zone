@@ -208,7 +208,7 @@ export function commandsToPages(
     }
 
     function addGlyph(command: GlyphCommand, offset: number): number {
-        let codepoint = command.char.codePointAt(0)!;
+        const codepoint = command.char.codePointAt(0)!;
 
         const char = layout.font.characters.get(codepoint) || layout.font.characters.get(FALLBACK_CODEPOINT)!;
         const pos = makeVector2(offset, currLine * (layout.font.lineHeight + 4));
